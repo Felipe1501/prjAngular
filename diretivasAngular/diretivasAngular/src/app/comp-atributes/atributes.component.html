@@ -1,0 +1,25 @@
+<p [ngClass]="estilo">app-atributes</p>
+<button (click)="trocar()">TROCAR</button>
+<p [ngStyle]="{'background': corFundo, 'color': corFonte}">SALVEEE</p>
+
+<ng-content select="h2"></ng-content>
+
+<p>LISTA</p>
+<input type="text" [(ngModel)]="item"> 
+<button (click)="adicionarLista()">ADD</button>
+<p>{{item}}</p>
+
+<ul>
+    <li *ngFor="let elemento of lista">{{elemento}}</li>
+</ul>
+<hr>
+
+<ng-content select="p"></ng-content>
+<ng-template [ngIf]="isEnableBlock">
+    <a href="#">FINALIZAR COMPRA</a>
+</ng-template>
+
+<ng-template [ngIf]="false">
+    <a href="#">ADD CARRINHO</a>
+</ng-template>
+<hr>

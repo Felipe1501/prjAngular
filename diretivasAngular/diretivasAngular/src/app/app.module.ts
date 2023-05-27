@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
-import { HelloComponent } from './components/Hello/hello.component';
+import { CardComponent } from './card/card.component';
+import { AtributesComponent } from './comp-atributes/atributes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent,
-    
-    
+    CardComponent,
+    AtributesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
+  exports:[],
   providers: [],
   bootstrap: [AppComponent]
 })

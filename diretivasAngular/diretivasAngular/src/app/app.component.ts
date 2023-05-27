@@ -6,10 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'prjAngular';
-  isAliveCheckSample:boolean = true;
-
-  disposeCheckSample():void{
-    this.isAliveCheckSample = false
-  }
+  title = 'diretivasAngular';
+  isAliveCard = true;
 }
