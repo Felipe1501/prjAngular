@@ -12,7 +12,6 @@ export class CardComponent implements OnInit {
 
     pokemon:pokemonData 
     
-    attributesTypes:string[] = ['']
 
     constructor(
         private service:PokemonService
@@ -28,7 +27,11 @@ export class CardComponent implements OnInit {
     }
     
     ngOnInit(): void {
-        this.service.getPokemon("ditto").subscribe(
+        this.getPokemon('pikachu')
+    }
+
+    getPokemon(searchName:string){
+        this.service.getPokemon(searchName).subscribe(
             {
                 next: (res) => {
 
@@ -43,10 +46,10 @@ export class CardComponent implements OnInit {
                     
                     
                 },
-                error: (err) => console.log(err)
+                error: (err) => console.log("not found")
             
             }
         )
+        
     }
-
 }
