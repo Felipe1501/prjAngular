@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
   selector: 'app-card',
@@ -11,10 +12,14 @@ export class CardComponent implements OnInit {
     name:string = ""
     attributesTypes:string[] = ['']
 
-    constructor(){}
+    constructor(
+        private service:PokemonService
+    ){
+
+    }
     
     ngOnInit(): void {
-
+        this.service.getPokemon("nome")
     }
 
 }
