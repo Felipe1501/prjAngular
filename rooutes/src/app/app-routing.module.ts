@@ -9,9 +9,22 @@ const routes: Routes = [
     component: TitleComponent,
     pathMatch: 'full'
   },
+  //portfolio
+  //portfolio/:id
+  //portfolio/:id/:token
   {
     path: 'portfolio',
-    component: CardComponent
+    component: CardComponent,
+    children: [
+      {
+        path: ':id',
+        component: CardComponent
+      },
+      {
+        path: ':id/:token',
+        component: CardComponent
+      },
+    ]
   },
   {
     path: '**',

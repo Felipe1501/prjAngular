@@ -1,0 +1,8 @@
+.activated{
+    color: rgb(219, 10, 10);
+    font-size: larger;
+}
+
+li{
+    list-style: none;
+}
